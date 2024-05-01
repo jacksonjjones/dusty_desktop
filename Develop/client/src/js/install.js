@@ -19,5 +19,5 @@ butInstall.addEventListener("click", async () => {
 
 // Event listener for the 'appinstalled' event, triggered when the PWA has been successfully installed
 window.addEventListener("appinstalled", (event) => {
-  console.log("😇", "appinstalled", event);
+  console.log("appinstalled", event);
 });

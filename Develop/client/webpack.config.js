@@ -8,7 +8,7 @@ module.exports = () => {
     mode: "development", // Set the mode to development
     entry: {
       main: "./src/js/index.js", // Entry point for main JavaScript bundle
-      serviceWorker: "./src/js/serviceWorker.js", // Entry point for service worker logic
+      install: "./src/js/install.js",
     },
     output: {
       filename: "[name].bundle.js", // Output filename with dynamic name based on entry key
@@ -23,7 +23,7 @@ module.exports = () => {
       // Workbox InjectManifest configuration
       new InjectManifest({
         swSrc: "./src-sw.js", // Service worker source file
-        swDest: "service-worker.js", // Destination file for injected service worker
+        swDest: "src-sw.js", // Destination file for injected service worker
       }),
       // WebpackPwaManifest configuration
       new WebpackPwaManifest({
